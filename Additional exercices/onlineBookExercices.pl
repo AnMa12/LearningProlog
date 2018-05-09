@@ -49,12 +49,12 @@ combine1([],[],[]).
 %and combines the elements of the first two lists into the third as follows:
 %?-  combine2([a,b,c],[1,2,3],X). X  =  [[a,1],[b,2],[c,3]] 
 %?-  combine2([f,b,yip,yup],[glu,gla,gli,glo],Result). Result  =  [[f,glu],[b,gla],[yip,gli],[yup,glo]]
-combine2([H1|T1],[H2|T2],[H3|T3]) :- H3 = [H1,H2], combine1(T1,T2,T3).
+combine2([H1|T1],[H2|T2],[H3|T3]) :- H3 = [H1,H2], combine2(T1,T2,T3).
 combine2([],[],[]). %!!!merge doar pe primele elemente
 
 %3. Finally, write a 3-place predicate combine3 which takes three lists as arguments 
 %and combines the elements of the first two lists into the third as follows:
 %?-  combine3([a,b,c],[1,2,3],X). X  =  [j(a,1),j(b,2),j(c,3)] 
 %?-  combine3([f,b,yip,yup],[glu,gla,gli,glo],R). R  =  [j(f,glu),j(b,gla),j(yip,gli),j(yup,glo)]
-combine3([H1|T1],[H2|T2],[H3|T3]) :- H3 = j(H1,H2), combine1(T1,T2,T3).
+combine3([H1|T1],[H2|T2],[H3|T3]) :- H3 = j(H1,H2), combine3(T1,T2,T3).
 combine3([],[],[]). %!!!merge doar pe primele elemente
