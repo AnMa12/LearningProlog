@@ -18,3 +18,12 @@ word(enhance,e,n,h,a,n,c,e).
 word(anagram,a,n,a,g,r,a,m).
 word(connect,c,o,n,n,e,c,t).
 word(elegant,e,l,e,g,a,n,t).
+
+H1(_, X1, _, X2, _, X3, _).
+H2(_, Y1, _, Y2, _, Y3, _).
+H3(_, Z1, _, Z2, _, Z3, _).
+V1(_, X1, _, Y1, _, Z1, _).
+V2(_, X2, _, Y2, _, Z2, _).
+V3(_, X3, _, Y3, _, Z3, _).
+
+crossword(V1, V2, V3, H1, H2, H3).
